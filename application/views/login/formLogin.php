@@ -34,18 +34,49 @@
                     
                     <div class="card-body">
 						<h5 class="card-title text-center">Fazer Login no T.P.R.M</h5>
-						<form class="form-signin" action="login/autenticar" method="post">
-                            <div class="form-label-group">
-                                <input name="email" type="text" id="email" class="form-control" placeholder="Email" required autofocus>
-                                <label for="email">E-mail</label>
-                            </div>
+						<?php
+							$attributes = array('class' => 'form-signin');
+							echo form_open('login/autenticar', array(
+								'class' => 'form-signin'
+							));
+						?>
+						<div class="form-label-group">
+						<?php 
+							
+							echo form_input(array(
+								"name" => "email",
+								"id" => "email",
+								"class" => "form-control",
+								"maxlength" => "255",
+								"required" => true
+							));
+							echo form_label("Email", "email");
+						?>
+						</div>
+							
+						<div class="form-label-group">
+							<?php 
+								
+								echo form_password(array(
+									"name" => "senha",
+									"id" => "senha",
+									"class" => "form-control",
+									"maxlength" => "255",
+									"required" => true
+								));
+								echo form_label("Senha", "senha");
+							?>
+						</div>
 
-                            <div class="form-label-group">
-                                <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-                                <label for="inputPassword">Senha</label>
-                            </div>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="background-color: #6c5ce7;">Entrar</button>
-                        </form>
+						<?php
+							echo form_button(array(
+								"class" => "btn btn-lg btn-primary btn-block text-uppercase",
+								"type" => "submit",
+								"content" => "Login",
+								"style" => "background-color: #6200EA; border-radius: 30px;"
+							));
+							echo form_close();
+						?>
 					</div>
 					<div class="card-img-left d-none d-md-flex" style="height: 450px;">
                         <!-- Background image for card set in CSS! -->
