@@ -9,6 +9,12 @@ Esse sistema web foi desenvolvida para ser avaliado como Projeto de Estágio da 
 * PHP - linguagem de programação
 * CodeIginiter - framework de desenvolvimento de aplicações em PHP 
 
+## Código
+
+Todo código da aplicação se encontra na pasta application -> controllers, models e views.
+
+![captura de tela 762 _li](https://user-images.githubusercontent.com/30981427/51224397-68d7c900-1924-11e9-9c26-c2c5ec350d32.jpg)
+
 ## Requisitos para executar a aplicação
 
 ### Baixando o repositorio
